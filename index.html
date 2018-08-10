@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio Responsive Layout</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<header id="main_header">
+		<div class="container">
+			<h1>logo here</h1>
+			<nav id="main_gnb">
+				<ul>
+					<li><a href="#">home</a></li>
+					<li><a href="#">about</a></li>
+					<li><a href="#">works</a></li>
+					<li><a href="#">contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<section id="visual">
+		<div class="visual_txt">
+			<h1>디지털 커뮤니케이션을 위한 UX/UI</h1>
+			<h2>데이터 시각화의 최전선에 서겠습니다.</h2>
+		</div>
+	</section>
+	
+	<section id="about">
+		<h1>About Me</h1>
+		<article class="container">
+			<div class="col-3">
+				<a href="#"><i class="fab fa-adn"></i></a>
+				<p>우리 마케팅은 고객님에게 최고 성과로 연결되는 마케팅을 제안해드리며, 관리해드리고 있습니다. 한번 믿고 맡겨 주시면 최선을 다하겠습니다.</p>
+			</div>
+			<div class="col-3">
+				<a href="#"><i class="fab fa-adn"></i></a>
+				<p>온오프라인 마케팅을 전문으로 하고 있으며, 어떤 매체라도 효과적인 방법을 찾아드립니다. 함께; 고민하고 책임지는 마케팅 회사가 되겠습니다.</p>
+			</div>
+			<div class="col-3">
+				<a href="#"><i class="fab fa-adn"></i></a>
+				<p>광고의효율을 생각합니다. 높은 효율을 내기 위해 다양한 방법을 실험하고, 비용이 적게 드는 방법을 찾아 드립니다.</p>
+			</div>						
+		</article>
+	</section>
+	
+	<section id="works">
+		<h1>My Works</h1>
+		<p><a href="#" class="btn_all">전체보기</a></p>
+		<ul class="work_list container">
+			<li class="col-3">
+				<a href="#">
+					<img src="http://placehold.it/400x400" alt="work1">
+					<div class="textbox">
+						<h4>High quality design inspiration</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, blanditiis.</p>
+					</div>
+				</a></li>
+			<li class="col-3">
+				<a href="#">
+					<img src="http://placehold.it/400x400" alt="work1">
+					<div class="textbox">
+						<h4>High quality design inspiration</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, blanditiis.</p>
+					</div>
+				</a></li>
+			<li class="col-3">
+				<a href="#">
+					<img src="http://placehold.it/400x400" alt="work1">
+					<div class="textbox">
+						<h4>High quality design inspiration</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, blanditiis.</p>
+						<p>lorem</p>
+					</div>
+				</a></li>												
+		</ul>
+	</section>
+	
+	<footer id="main_footer">
+		<nav class="sns">
+			<a href="#">blog</a>
+			<a href="#">youtube</a>
+			<a href="#">instagram</a>
+		</nav>	
+			
+		<div id="to_top">
+			<a href="#">
+				<i class="fas fa-angle-double-up"></i></a></div>
+						
+		<div class="copy">
+			<p>Copyright&copy; 2018 홍길동</p>
+		</div>
+	</footer>
+	
+	
+	<script>
+		$(function(){
+			$('#visual').on('mouseover', function(){
+				console.log('hover');
+				$('.visual_txt')
+					.css('animation-play-state', 'running');
+			});
+		});
+	
+	</script>
+</body>
+</html>

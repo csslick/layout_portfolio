@@ -115,35 +115,17 @@ p{
 /* 모바일 */
 @media (max-width: 767px){
 	#main_header{
-		border: 1px solid green;
-		height: 140px;
+		height: 120px;
 		position: relative;
-	}
+	}	
 	#main_gnb{ 
-		margin-top: 30px;
+		margin-top: 20px;
 	}
-	#main_gnb li { display: inline-block;}
 	#main_gnb li > a{ 
 		padding: 0 10px;
-		opacity: 0.8;
-		transition: 0.2s;
 	}
-	
-	#visual > .visual_txt{
-		position: relative;
-		text-align: center;
-		font-size: 12px;
-		padding: 40px 20px;
-
-	}
-	#visual .cta{
-		position: absolute;
-		display: inline-block;
-		bottom: 20px;
-		left: 50%;
-		transform: translate(-50%, 0);
-		background: #333;
-		padding: 10px 20px;
+	#visual{
+		height: calc(100vh - 120px);
 	}	
 }
 

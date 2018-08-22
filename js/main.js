@@ -36,9 +36,5 @@ $(function(){
 		return false; // 앵커태그 무효화
 	});
 	
-	// 타이틀 클릭시 페이지 리로드
-	$('#main_header h1').on('click', function(){
-		location.href = './index.html';
-	});
 
 });

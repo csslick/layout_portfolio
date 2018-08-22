@@ -1,7 +1,8 @@
 $(function(){
 		
 	// 능력치 그래프 
-	var about_top = $('#skill').offset().top;
+	var yoffset = 200;	// 스크로 보정값
+	var about_top = $('#skill').offset().top - yoffset;
 
 	$(window).on('scroll', function(){
 		var win_scroll_top = $(window).scrollTop();
@@ -33,6 +34,11 @@ $(function(){
 			scrollTop: target.offset().top
 		});
 		return false; // 앵커태그 무효화
+	});
+	
+	// 타이틀 클릭시 페이지 리로드
+	$('#main_header h1').on('click', function(){
+		location.href = './index.html';
 	});
 
 });

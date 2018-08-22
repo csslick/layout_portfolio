@@ -36,5 +36,29 @@ $(function(){
 		return false; // 앵커태그 무효화
 	});
 	
+	// 유투브 비디오 크기 설정
+	function youtube_iframe(){
+		var $iframe = $('#skill iframe');
+		var i_width = parseInt($iframe.css('width'));
+		console.log(i_width);
+		$iframe.css('height', 56.25*i_width/100);
+	}
+	
+	youtube_iframe();
+	$(window).on('resize', function(){
+		youtube_iframe();
+	});
+	
+	// 비디오 버튼 효과
+	$('#btn_play').on('click', function(){
+		console.log('btn play');
+		 $(this).hide(200, function(){
+			 $('#skill iframe')
+				.stop()
+				.animate({'opacity': 1});	 
+		 });
+		 $('#skill .col-2').last().css('border', 'none');	
+			
+	});
 
 });

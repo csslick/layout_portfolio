@@ -289,3 +289,22 @@ p{
 }
 
 
+iframe{
+	width: 100%;
+}
+#skill .col-2:last-child{
+	position: relative;
+	border: 3px solid rgba(0,0,0,.2);
+}
+#skill .col-2:last-child i{
+	position: absolute;
+	font-size: 6em;
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 99;
+	cursor: pointer;
+
+}
+#skill iframe{
+	opacity: 0;
+}

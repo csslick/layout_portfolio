@@ -1,6 +1,7 @@
 /* css */
 /* 구글 웹폰트 */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+@import url('font-awesome-animation.min.css');
 *{
 	margin: 0; padding: 0;
 	box-sizing: border-box;
@@ -49,10 +50,23 @@ p{
 
 /* 헤더 */
 #main_header{
-	border: 1px solid green;
-	height: 140px;
 	position: relative;
+/*	border: 1px solid green;*/
+	height: 140px;
 }
+
+/* 스크롤시 고정 메뉴 */
+#main_gnb.fixed{
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background: #000;
+	color: #fff;
+	left: 0; bottom: 0;
+	z-index: 99;
+}
+
 #main_gnb{ margin-top: 30px;}
 #main_gnb li { display: inline-block;}
 #main_gnb li > a{ 
@@ -62,6 +76,7 @@ p{
 }
 #main_gnb li > a:hover,
 #main_gnb li > a:active{ opacity: 1;}
+
 
 /* 섹션 여백 설정 */
 #visual, #about, #works, #skill{
@@ -75,10 +90,15 @@ p{
 	margin: 0 auto;
 	height: calc(100vh - 140px);
 	background: #000;
-	background-image: url(../images/visual1.jpg);
-	background-size: cover;
+	background-image: 
+		url(../images/bg-top_tri.png),
+		url(../images/visual1.jpg);
+	background-repeat: no-repeat;
+	background-size: contain, cover;
 	color: #fff;
-	background-attachment: fixed;
+	background-position: center bottom, center;
+	background-attachment: scroll, fixed;
+	
 }
 #visual > .visual_txt{
 	position: absolute;
@@ -183,7 +203,7 @@ p{
 	width: 100%;
 	display: block;
 }
-#works a{
+#works ul a{
 	display: block;
 	position: relative;
 }
@@ -224,10 +244,12 @@ p{
 #main_footer > .copy{
 	background: #3c3c3c;
 	padding: 50px 0;
+	padding-bottom: 100px;
 }
 
 /* 모바일 */
 @media (max-width: 767px){
+
 	#main_header{
 		height: 120px;
 		position: relative;
@@ -287,7 +309,7 @@ p{
 	}
 
 }
-
+/* -------- */
 
 iframe{
 	width: 100%;
@@ -308,3 +330,12 @@ iframe{
 #skill iframe{
 	opacity: 0;
 }
+
+#works .btn_all, #works .btn_close{
+	background: #333;
+	color: #fff;
+	display: inline-block;
+	padding: 10px 30px;
+}
+
+
